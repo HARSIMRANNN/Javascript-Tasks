@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stream = prompt("Enter stream");
+        var units=parseInt(prompt("Enter Units consumed"));
+        
+        if(stream=="rural")
+        {
+           if(units<=200 && units>0)
+           {
+             alert(units*2);
+           }
+           else if(units>500){
+              alert(200*5(units-200)*8); 
+           }
+        }
+        else if(stream=="urban")
+        {
+            if(units<=200 && units>0)
+           {
+             alert(units*1.50);
+           }
+           else if(units>500){
+              alert(200*1.50(units-200)*5); 
+           }
+        }
+        else{
+            alert("Not Defined")
+        }
+
+    </script>
+</body>
+</html>

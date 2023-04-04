@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <script>
+        var fruit = ["mango","apple","kiwi"];
+        document.write("Orignal Array"+"<br>");
+        for(var i=0;i<fruit.length;i++)
+        {
+            document.write(fruit[i]+"<br>");
+        }
+        document.write("<br>"+"After POP"+"<br>");
+        var p = fruit.pop();
+        for(var i=0;i<fruit.length;i++)
+        {
+            document.write(fruit[i]+"<br>");
+        }
+        fruit.push("orange");
+        document.write("<br>"+"After PUSH"+"<br>");
+        for(var i=0;i<fruit.length;i++)
+        {
+            document.write(fruit[i]+"<br>");
+        }
+
+        var a = new Array();
+        for(var i=0;i<4;i++)
+        {
+            a[i] = prompt("Enter names");
+        }
+
+        document.write("<br>"+"User Input"+"<br>");
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+        }
+        
+        
+        document.write("<br>"+"After JOIN"+"<br>");
+        var v;
+        for(var i=0;i<a.length;i++)
+        {
+            v = a.join("M");
+        }
+       document.write(v);
+
+       a.shift();
+       document.write("<br>"+"after SHIFT"+"<br>");
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+        }
+
+        a.unshift("POT");
+        document.write("<br>"+"after UNSHIFT"+"<br>");
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+        }
+
+        a.splice(1,2,"QWERT","ASDFG");
+        document.write("<br>"+"after SPLICE"+"<br>");
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i]+"<br>");
+        }
+
+
+    </script>
+</head>
+<body>
+    <p id="i1"></p>
+</body>
+</html>

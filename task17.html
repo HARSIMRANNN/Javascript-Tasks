@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+  
+    <style>
+        .b{
+            text-align: center;
+        }
+        #one{
+            background-color: antiquewhite;
+            width: 90%;
+            height: 50%;
+           display: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <button class="b" onclick="fun()">Go!</button>
+   <p id="one">ygvygv</p>
+
+   <script>
+    function fun(){
+        var a = new Array();
+        var i=0;
+        var large=0;
+        var sum=0;
+        var secondLast=0;
+    do{
+      var tmp = parseInt(prompt("Enter number"));
+
+      if(tmp==-1)
+      {
+        break;
+      }
+      a[i] = tmp;
+      i=i+1;
+      sum+=tmp;
+      if(large<tmp)
+      {
+        large=tmp;
+      }
+    }while(true);
+
+    document.write("<br>"+"Array Elements"+"<br>");
+    for(var i=0;i<a.length;i++)
+    {
+        document.write(a[i]+"<br>");
+    }
+    document.write("<br>"+"Largest Elements : "+large+"<br>");
+    document.write("<br>"+"Sum of Elements : "+sum+"<br>");
+    document.write("<br>"+"Difference between sum and largest element : "+(large-sum)+"<br>");
+
+    for(var i=0;i<a.length-1;i++)
+    {
+        secondLast = a[i];
+    }
+    var c = confirm("Second Last Element : "+secondLast);
+    if(c)
+    {
+        a.shift();
+    }
+    else{
+        a.pop();
+    }
+    a.sort();
+    var j;
+    for(var i=0;i<a.length;i++)
+    {
+      j=a.join(" ");
+    }
+    document.write("<br>"+"Sorted array : "+j);
+    document.getElementById("one").style.display="block";
+    document.getElementById("one").innerHTML=j;
+    document.getElementById("one").style.backgroundColor="yellow";
+  
+    }
+   
+</script>
+
+   </body>
+</html>

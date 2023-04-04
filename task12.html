@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+          var n = document.getElementById("a").value;
+          var sum=0,count=0,large=1;
+          
+          for(var i=0;i<n;i++)
+          {
+              var m = parseInt(prompt("Enter a number"));
+            
+              if(m%8==0 && m%9==0)
+              {
+                 sum=sum+1;
+                 count=count+parseInt(m);
+                 if(m>large)
+                 {
+                  large=m;
+                 }
+              }
+          }
+  
+           var p =confirm("Count is "+count+" Sum is "+sum);
+          if(p)
+          {
+              alert(Date());
+          }
+          else{
+              alert("Greatest number is "+large);
+          }
+        }
+      </script>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="button" value="click" onclick="fun()">
+   
+</body>
+</html>

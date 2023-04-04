@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script>
+      
+      function amount(){
+      var p = parseInt(document.getElementById("price").value);
+      var v = document.getElementById("vat").checked;
+      var i = document.getElementById("one").value;
+      var q = parseInt(document.getElementById("qty").value);
+      var r = p*q;
+      if(v)
+      {
+        r=r+r*.13;
+        document.getElementById("item").innerHTML=i;
+        document.getElementById("net").innerHTML=r;
+        document.getElementById("bill").style.display="block";
+      }
+      else{
+       
+        document.getElementById("item").innerHTML=i;
+        document.getElementById("net").innerHTML=p;
+        document.getElementById("bill").style.display="block";
+      }
+       
+      }
+    </script>
+    <style>
+        .Form{
+            border-style: solid;
+            border-width: 2px;
+            text-align: center;
+            border-color: black;
+            background-color:lightgoldenrodyellow;
+            margin: 10%;
+            padding: 3%;
+            font-family: cursive;
+        }
+
+        #bill{
+         
+            border-style: solid;
+            border-width: 2px;
+            text-align: center;
+            border-color: black;
+            background-color:lightgoldenrodyellow;
+            margin: 10%;
+            padding: 3%;
+            font-family: cursive;
+            display: none;
+        }
+        h3{
+            width: 10%;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="Form">
+        <form action="">
+            <label for="">Item</label> <input type="text" id="one"> <br> <br>
+            <label for="">Price</label><input type="number" id="price"> <br> <br>
+            <label for="">qty</label><input type="number" id="qty"> <br> <br>
+           
+            <input type="checkbox" value="VAT" id="vat"> VAT <br> <br>
+            <input type="button" value="Net Amount" onclick="amount()">
+        </form>
+    </div>
+   <div id="bill">
+    <p> Item :<span id="item"></span></p><br>
+
+    <p>Bill : 
+    <span id = "net"></span></p>
+     <center><h3>Thanks for visiting!</h3></center>
+     
+   </div>
+</body>
+</html>

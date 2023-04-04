@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        var a = parseInt(prompt("Enter a number"));
+        
+        var result=0;
+        var r=0;
+        
+        while(a>0)//123
+        {
+           r = (parseInt(a)%10);//1
+           result=parseInt(result)*10+r; //321
+           a=parseInt(a)/10;//1
+           
+        }    
+        alert(result/10);
+        
+    
+    </script>
+</body>
+</html>
